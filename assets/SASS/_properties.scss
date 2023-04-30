@@ -1,0 +1,177 @@
+@import "./variables";
+#properties{
+    margin: 290px 0;
+    .properties_section{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .properties_title{
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 840px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        @media (max-width: 490px) {
+            text-align: center;
+        }
+
+    }
+    h1{
+        font-size: 3.6rem;
+        color: $maintextColor;
+        font-weight: 700;
+        line-height: 91px;
+    }
+    .title{
+        @media (max-width: 650px) {
+            font-size: 3rem;
+        } 
+        @media (max-width: 640px) {
+            font-size: 2.5rem;
+        } 
+        @media (max-width: 490px) {
+            text-align: center;
+            line-height: 50px;
+        } 
+    }
+    p{
+        font-size: 1.1rem;
+        color: $pColor;
+    }
+    form{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        label{
+            padding-right: 30px;
+            color: $psecondColor;
+            font-size: 1.2rem;
+            &:hover{
+                color: $maintextColor;
+                transition: .6s ease-in-out;
+            }
+            @media (max-width: 367px) {
+                padding-right: 10px;
+            }
+        }
+    }
+    .properties_boxes{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        @media (max-width: 1020px) {
+            flex-wrap: wrap;
+        }
+    }
+    .properties_box{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 35px;
+        border-radius: 40px;
+        &:hover{
+            box-shadow: 2px 4px 55px 0px #0000001C;
+            transition: all .6s ease-in-out;
+        }
+        @media (max-width: 450px) {
+            padding: 20px;
+        }
+        @media (max-width: 984px) {
+            border-radius: 25px;
+        }
+        
+        img{
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+            width: 335px;
+            @media (max-width: 450px) {
+                width: 100%;
+            }
+        }
+        h1{
+            text-align: left;
+            @media (max-width: 380px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 290px) {
+                font-size: 2rem;
+            }
+        }
+        p{
+            @media (max-width: 380px) {
+                font-size: 1rem;
+            }
+        }
+    }
+    h2{
+        font-size: 1.85rem;
+        font-weight: 700;
+        color: $maintextColor;
+        @media (max-width: 450px) {
+            font-size: 1.5rem;
+        }
+        @media (max-width: 380px) {
+            font-size: 1.3rem;
+        }
+        @media (max-width: 330px) {
+            font-size: 1.1rem;
+        }
+        // @media (max-width: 1295px) {
+        //     font-size: 1.3rem;
+        // }
+        // @media (max-width: 1020px) {
+        //     font-size: 1.1rem;
+        // }
+    }
+    .properties_box_noted{
+        display: flex;
+        gap: 45px;
+        @media (max-width: 1220px) {
+            gap: 30px;
+        }
+        @media (max-width: 291px) {
+            flex-direction: column; 
+            align-items: center;  
+        }
+    }
+    h6{
+        color: $psecondColor;
+        font-size: 1.1rem;
+        margin-bottom: 35px;
+        @media (max-width: 1220px) {
+            font-size: 1rem;
+        }
+        
+    }
+    .after{
+        position: relative;
+        z-index: 0;
+    }
+    .after::after{
+        content: "";
+        position: absolute;
+        width: 0.5px;
+        height: 19px;
+        background-color: $psecondColor;
+        right: -20px;
+        top: 4px;
+        @media (max-width: 1220px) {
+            right: -15px;
+            top: 2px;
+        }
+        @media (max-width: 291px) {
+            height: 0.5px;
+            width: 80px;
+            top: 50px;
+        }
+    }
+    .btn{
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 15px 0;
+    }
+}

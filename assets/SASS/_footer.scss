@@ -1,0 +1,50 @@
+@import "./variables";
+#footer{
+    .footer_boxes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 120px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    p{
+        padding-top: 50px;
+        width: 300px;
+        color: $pColor;
+        @media (max-width: 768px) {
+            padding-top: 20px;
+        }
+        @media (max-width: 350px) {
+            width: 95%;
+         }
+    }
+    h1{
+        color: $maintextColor;
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding-bottom: 50px;
+        @media (max-width: 768px) {
+            padding-bottom: 20px;
+        }
+    }
+    h2{
+        width: 220px;
+        color: $maintextColor;
+        @media (max-width: 350px) {
+           width: 95%;
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    a{
+        color: $maintextColor;
+        font-weight: 400;
+    }
+}

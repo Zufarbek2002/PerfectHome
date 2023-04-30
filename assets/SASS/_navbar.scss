@@ -1,0 +1,70 @@
+@import "./variables";
+#navbar{
+    background-color: $bodybgColor;
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    .navbar_section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 20px;
+    }
+    .navbar_menu{
+        display: flex;
+        gap: 107px;
+        align-items: center;
+        @media (max-width: 1130px) {
+            gap: 50px;
+        }
+        @media (max-width: 820px) {
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            width: 100vw;
+            height: calc(100vh - 80px);
+            position: fixed;
+            z-index: 99;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            bottom: 0;
+            left: -100vw;
+            row-gap: 20px;
+            background-color: $bodybgColor;
+            transition: all .6s ease-in-out;
+        }
+    }
+    ul{
+        display: flex;
+        gap: 70px;
+        @media (max-width: 1130px) {
+            gap: 30px;
+        }
+        @media (max-width: 820px) {
+            gap: 15px;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+    a{
+        color: $maintextColor;
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+    #check{
+        display: none;
+    }
+    label{
+        display: none;
+        cursor: pointer;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+    #check:checked ~ .navbar_menu{
+        left: 0;
+    }
+}

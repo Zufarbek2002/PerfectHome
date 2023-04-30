@@ -1,0 +1,67 @@
+@import "./variables";
+#customer{
+    background-color: $bodybgColor;
+    .customer_section{
+        display: flex;
+        align-items: center;
+        padding: 110px 0;
+    }
+    .customer_img{
+        width: 45%;
+        position: relative;
+        @media (max-width: 768px) {
+            display: none;
+        }
+        img{
+            width: 100%;
+            position: absolute;
+            top: -540px;
+            @media (max-width: 1050px) {
+                left: -100px;
+                top: -450px;
+            }
+            
+        }
+    }
+    .customer_text{
+        width: 40%;
+        display: flex;
+        flex-direction: column;   
+        gap: 20px;
+        @media (max-width: 1050px) {
+            width: 50%;
+        }
+        @media (max-width: 768px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    h3{
+        font-size: 1.01rem;
+        color: #13A6BA;
+        letter-spacing: 4px;
+    }
+    h1{
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 80px;
+        @media (max-width: 1160px) {
+            font-size: 2.8rem;
+            line-height: 60px;
+        }
+    }
+    p{
+        font-size: 1.1rem;
+        color: $maintextColor;
+        line-height: 30px;
+    }
+    h2{
+        font-size: 1.4rem;
+        color: $maintextColor;
+        font-weight: 700;
+    }
+    h4{
+        font-size: 1.05rem;
+        color: $pColor;
+    }
+}
